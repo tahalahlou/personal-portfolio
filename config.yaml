@@ -1,7 +1,8 @@
-baseURL: "/"
-languageCode: en-us
+baseURL: "https://tahalahlou.dev/"
+languageCode: "en-us"
 title: "Personal Portfolio"
-theme: hugo-noir
+theme: "hugo-noir"
+enableRobotsTXT: true
 
 menu:
   main:
