@@ -57,13 +57,29 @@
         
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+        
+        <!-- Dark-by-default theme boot script -->
         <script>
-            if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                document.documentElement.classList.add('dark');
-            } else {
+          (function () {
+            try {
+              var t = localStorage.getItem('color-theme');
+              // default to dark if nothing saved
+              if (!t) {
+                t = 'dark';
+                localStorage.setItem('color-theme', t);
+              }
+              if (t === 'light') {
                 document.documentElement.classList.remove('dark');
+              } else {
+                document.documentElement.classList.add('dark');
+              }
+            } catch (e) {
+              // if anything fails, fall back to dark
+              document.documentElement.classList.add('dark');
             }
+          })();
         </script>
+
         <style>
             :root {
                 color-scheme: light dark;
@@ -134,4 +150,4 @@
         </main>
         {{ partial "footer" . }}
     </body>
-</html> 
+</html>
