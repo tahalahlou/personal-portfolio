@@ -1,0 +1,128 @@
+{{ $currentPage := . }}
+<script>
+    // Time display function
+    function updateLocalTime() {
+        const timeElements = document.querySelectorAll('#local-time, #mobile-local-time');
+        timeElements.forEach(element => {
+            if (element) {
+                const now = new Date();
+                const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                element.textContent = timeString;
+            }
+        });
+    }
+    updateLocalTime();
+    setInterval(updateLocalTime, 1000);
+
+    // Mobile menu functionality
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuLinks = document.querySelectorAll('[data-menu-link]');
+
+    function openMobileMenu() {
+        mobileMenu.classList.remove('hidden');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+    }
+
+    function closeMobileMenu() {
+        mobileMenu.classList.add('hidden');
+        document.body.style.overflow = ''; // Restore scrolling
+    }
+
+    mobileMenuButton.addEventListener('click', openMobileMenu);
+    mobileMenuClose.addEventListener('click', closeMobileMenu);
+
+    // Close menu when clicking on a link
+    menuLinks.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+    });
+
+    // Theme toggle functionality
+    const themeToggleBtnDesktop = document.getElementById('theme-toggle-button-desktop');
+    const themeToggleDarkIconDesktop = document.getElementById('theme-toggle-dark-icon-desktop');
+    const themeToggleLightIconDesktop = document.getElementById('theme-toggle-light-icon-desktop');
+
+    const themeToggleBtnMobile = document.getElementById('theme-toggle-button-mobile');
+    const themeToggleDarkIconMobile = document.getElementById('theme-toggle-dark-icon-mobile');
+    const themeToggleLightIconMobile = document.getElementById('theme-toggle-light-icon-mobile');
+
+    // Function to update icons based on theme
+    function updateIcons(isDarkMode) {
+        if (themeToggleDarkIconDesktop && themeToggleLightIconDesktop) {
+            if (isDarkMode) {
+                themeToggleLightIconDesktop.classList.remove('hidden');
+                themeToggleDarkIconDesktop.classList.add('hidden');
+            } else {
+                themeToggleLightIconDesktop.classList.add('hidden');
+                themeToggleDarkIconDesktop.classList.remove('hidden');
+            }
+        }
+        if (themeToggleDarkIconMobile && themeToggleLightIconMobile) {
+            if (isDarkMode) {
+                themeToggleLightIconMobile.classList.remove('hidden');
+                themeToggleDarkIconMobile.classList.add('hidden');
+            } else {
+                themeToggleLightIconMobile.classList.add('hidden');
+                themeToggleDarkIconMobile.classList.remove('hidden');
+            }
+        }
+    }
+
+    // Function to set the theme (dark or light)
+    function applyTheme(isDarkMode) {
+        if (isDarkMode) {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('color-theme', 'dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('color-theme', 'light');
+        }
+        updateIcons(isDarkMode);
+    }
+
+    // Initialize theme based on localStorage or prefers-color-scheme
+    let initialIsDarkMode = false;
+    if (localStorage.getItem('color-theme') === 'dark' || 
+        (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        initialIsDarkMode = true;
+    }
+    // Apply the initial theme. If it's dark, add the class to <html> immediately to prevent FOUC.
+    if (initialIsDarkMode && !document.documentElement.classList.contains('dark')) {
+         document.documentElement.classList.add('dark');
+    }
+    applyTheme(initialIsDarkMode); // This will set localStorage, icons, and ensure class is correct.
+
+    // Event listener for theme toggle buttons
+    function themeToggleClickHandler() {
+        const isCurrentlyDark = document.documentElement.classList.contains('dark');
+        applyTheme(!isCurrentlyDark); // Toggle to the opposite theme
+        
+        // If toggling from mobile menu, close the menu
+        if (window.innerWidth < 768) {
+            closeMobileMenu();
+        }
+    }
+
+    if (themeToggleBtnDesktop) {
+        themeToggleBtnDesktop.addEventListener('click', themeToggleClickHandler);
+    }
+    if (themeToggleBtnMobile) {
+        themeToggleBtnMobile.addEventListener('click', themeToggleClickHandler);
+    }
+    
+    // Add click event listener to the mobile menu background
+    mobileMenu.addEventListener('click', function(event) {
+        // Only close if clicking directly on the background (not on menu content)
+        if (event.target === mobileMenu) {
+            closeMobileMenu();
+        }
+    });
+    
+    // Handle escape key to close the menu
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+            closeMobileMenu();
+        }
+    });
+</script> 

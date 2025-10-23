@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+        
+        <!-- Favicon here-->
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.BaseURL }}favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.BaseURL }}favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.BaseURL }}favicon_io/favicon-16x16.png">
+        <link rel="manifest" href="{{ .Site.BaseURL }}favicon_io/site.webmanifest">        
+        <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+        <link rel="preload" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" as="style">            
+        <style>
+            html, body {
+                background-color: #FFFFFF; 
+                color: #1f2937; 
+            }
+            html.dark, html.dark body {
+                background-color: #121212; 
+                color: #f3f4f6; 
+            }
+            .border { 
+                border-color: #d4d4d8; 
+            }
+            html.dark .border {
+                border-color: #374151; 
+            }
+            .carousel-item {
+                display: inline-block;
+                margin: 0 1rem;
+            }            
+            .flex {
+                display: flex;
+            }
+            .flex-col {
+                flex-direction: column;
+            }
+            
+            @media (min-width: 768px) {
+                .md\:flex-row {
+                    flex-direction: row;
+                }
+            }
+            
+            .tech-carousel {
+                overflow: hidden;
+                width: 100%;
+                padding: 1rem 0;
+            }
+            
+            .carousel-track {
+                white-space: nowrap;
+            }
+        </style>
+        
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+        <script>
+            if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        </script>
+        <style>
+            :root {
+                color-scheme: light dark;
+            }
+            
+            .tech-icon {
+                filter: grayscale(100%) brightness(200%);
+                transition: all 0.3s ease;
+            }
+            .tech-icon:hover {
+                filter: none;
+            }
+            
+            @keyframes scroll {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(-100%);
+                }
+            }
+            
+            .tech-carousel {
+                width: 100%;
+                padding: 1rem 0;
+            }
+            
+            .tech-track {
+                width: fit-content;
+                animation: scroll 20s linear infinite;
+            }
+            
+            .tech-track:hover {
+                animation-play-state: paused;
+            }
+            
+            .tech-slide {
+                float: left;
+            }
+        </style>
+        <!-- FAVICONS -->
+        <link rel="icon" href='{{ "favicon.ico" | relURL }}?v=12' sizes="any" type="image/x-icon">
+        <link rel="icon" type="image/png" sizes="32x32" href='{{ "favicon-32x32.png" | relURL }}?v=12'>
+        <link rel="icon" type="image/png" sizes="16x16" href='{{ "favicon-16x16.png" | relURL }}?v=12'>
+        <link rel="apple-touch-icon" sizes="180x180" href='{{ "apple-touch-icon.png" | relURL }}?v=12'>
+        <link rel="manifest" href='{{ "site.webmanifest" | relURL }}?v=12'>
+
+        <!-- Fonts & Devicons -->
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+        <!-- Language switcher minimal CSS -->
+        <style>
+        .language-switcher{position:relative;display:inline-block}
+        .language-switcher-btn{display:flex;align-items:center;gap:.25rem;cursor:pointer}
+        .language-dropdown{display:none;position:absolute;background:var(--bg-secondary);min-width:120px;box-shadow:0 8px 16px rgba(0,0,0,.1);z-index:1;border-radius:.5rem;overflow:hidden}
+        .language-switcher:hover .language-dropdown{display:block}
+        .language-dropdown a{padding:.75rem 1rem;display:block;text-decoration:none;transition:background-color .2s}
+        .language-dropdown a:hover{background:rgba(0,0,0,.05)}
+        html.dark .language-dropdown a:hover{background:rgba(255,255,255,.05)}
+        .language-active{font-weight:600}
+        </style>
+    </head>
+    <body class="min-h-screen bg-bg-primary-light dark:bg-bg-primary-dark text-text-primary-light dark:text-text-primary-dark">
+        {{ partial "header" . }}
+        <main>
+            {{ block "main" . }}{{ end }}
+        </main>
+        {{ partial "footer" . }}
+    </body>
+</html> 

@@ -1,0 +1,18 @@
+projects:
+  - title: "AI Job Application Assistant"
+    description: "An automated job-application system that uses generative AI to match listings from major job boards with tailored resumes."
+    image: "/images/ai4.png"
+    tech: "LLMs, Python, FastAPI, n8n, LaTeX"
+    links:
+      - label: "Learn More"
+        url: "https://github.com/tahalahlou"
+    featured: true
+
+  - title: "Social Stockfish"
+    description: "A generative AI co-pilot that uses Monte Carlo simulations to model conversation paths and suggest the best reply."
+    image: "/images/ai6.png"
+    tech: "Flask, React, Python, Groq, Together AI"
+    links:
+      - label: "Learn More"
+        url: "https://github.com/tahalahlou"
+    featured: true

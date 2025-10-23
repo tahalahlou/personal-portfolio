@@ -1,0 +1,13 @@
+[author]
+name        = "Taha Lahlou"
+location    = "New York, New York, United States"
+description = "CS @ Columbia | Prev SDE @ Amazon"
+
+# --- Primary contacts used by the Contact page ---
+email               = "taharayanlahlou@gmail.com"
+linkedin            = "https://www.linkedin.com/in/taha-lahlou/"
+linkedin_username   = "taha-lahlou"
+
+# --- Optional extras used elsewhere on the site ---
+github              = "https://github.com/tahalahlou"
+github_username     = "tahalahlou"

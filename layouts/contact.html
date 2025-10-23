@@ -1,0 +1,69 @@
+{{ define "main" }}
+{{- $data  := site.Data.en.author -}}
+{{- $email := or $data.email $data.author.email .Site.Params.email -}}
+{{- $liURL := or $data.linkedin $data.author.linkedin .Site.Params.linkedin -}}
+{{- $liUser := or $data.linkedin_username $data.author.linkedin_username .Site.Params.linkedin_username -}}
+
+<div class="max-w-4xl mx-auto px-4 py-12">
+  <h1 class="text-5xl font-bold mb-6 text-text-primary-light dark:text-text-primary-dark">{{ .Title }}</h1>
+
+  <div class="bg-bg-primary-light dark:bg-bg-secondary-dark p-8 rounded-lg border border-border-primary-light dark:border-border-primary-dark">
+    <div class="prose prose-invert prose-lg max-w-none">
+      <div class="text-text-secondary-light dark:text-text-secondary-dark text-lg mb-8">
+        {{ .Content }}
+      </div>
+
+      <!-- Two-card grid -->
+      <div class="mt-2">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+          <!-- Email -->
+          <a href="mailto:{{ $email }}"
+             class="contact-link min-h-[64px] flex items-center gap-4 p-4 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark transition-all duration-300">
+            <svg class="w-7 h-7 text-text-secondary-light dark:text-text-secondary-dark shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.75">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            <div class="min-w-0">
+              <div class="text-text-secondary-light dark:text-text-secondary-dark hover:text-text-primary-light dark:hover:text-text-primary-dark transition-colors duration-300 truncate">
+                Email
+              </div>
+              <div class="text-sm text-text-tertiary-light dark:text-text-tertiary-dark truncate">
+                {{ $email }}
+              </div>
+            </div>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="{{ $liURL }}" target="_blank" rel="noopener"
+             class="contact-link min-h-[64px] flex items-center gap-4 p-4 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark transition-all duration-300">
+            <svg class="w-7 h-7 text-text-secondary-light dark:text-text-secondary-dark shrink-0" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.47 2H3.53a1.45 1.45 0 0 0-1.47 1.43v17.14A1.45 1.45 0 0 0 3.53 22h16.94a1.45 1.45 0 0 0 1.47-1.43V3.43A1.45 1.45 0 0 0 20.47 2ZM8.09 18.74h-3v-9h3ZM6.59 8.48a1.56 1.56 0 1 1 0-3.12a1.57 1.57 0 1 1 0 3.12Zm12.32 10.26h-3v-4.83c0-1.21-.43-2-1.52-2A1.65 1.65 0 0 0 12.85 13a2 2 0 0 0-.1.73v5h-3v-9h3V11a3 3 0 0 1 2.71-1.5c2 0 3.45 1.29 3.45 4.06Z"/>
+            </svg>
+            <div class="min-w-0">
+              <div class="text-text-secondary-light dark:text-text-secondary-dark hover:text-text-primary-light dark:hover:text-text-primary-dark transition-colors duration-300 truncate">
+                LinkedIn
+              </div>
+              <div class="text-sm text-text-tertiary-light dark:text-text-tertiary-dark truncate">
+                {{ if $liUser }}in/{{ $liUser }}{{ else }}LinkedIn{{ end }}
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .prose { color:#4b5563; } html.dark .prose { color:#9ca3af; }
+  .prose p { color:#4b5563; margin-bottom:1.5rem; line-height:1.9; }
+  html.dark .prose p { color:#9ca3af; }
+
+  .contact-link { position:relative; overflow:hidden; border:1px solid #d1d5db; }
+  html.dark .contact-link { border:1px solid #4b5563; }
+  .contact-link:hover { border-color:#9ca3af; transform:translateY(-2px); }
+  html.dark .contact-link:hover { border-color:#6b7280; }
+  @media (max-width:768px){ .contact-link{ width:100%; } }
+</style>
+{{ end }}

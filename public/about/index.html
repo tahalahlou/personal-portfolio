@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About - Personal Portfolio</title>
+        
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="//localhost:1313/favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="//localhost:1313/favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="//localhost:1313/favicon_io/favicon-16x16.png">
+        <link rel="manifest" href="//localhost:1313/favicon_io/site.webmanifest">        
+        <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+        <link rel="preload" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" as="style">            
+        <style>
+            html, body {
+                background-color: #FFFFFF; 
+                color: #1f2937; 
+            }
+            html.dark, html.dark body {
+                background-color: #121212; 
+                color: #f3f4f6; 
+            }
+            .border { 
+                border-color: #d4d4d8; 
+            }
+            html.dark .border {
+                border-color: #374151; 
+            }
+            .carousel-item {
+                display: inline-block;
+                margin: 0 1rem;
+            }            
+            .flex {
+                display: flex;
+            }
+            .flex-col {
+                flex-direction: column;
+            }
+            
+            @media (min-width: 768px) {
+                .md\:flex-row {
+                    flex-direction: row;
+                }
+            }
+            
+            .tech-carousel {
+                overflow: hidden;
+                width: 100%;
+                padding: 1rem 0;
+            }
+            
+            .carousel-track {
+                white-space: nowrap;
+            }
+        </style>
+        
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+        <script>
+            if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        </script>
+        <style>
+            :root {
+                color-scheme: light dark;
+            }
+            
+            .tech-icon {
+                filter: grayscale(100%) brightness(200%);
+                transition: all 0.3s ease;
+            }
+            .tech-icon:hover {
+                filter: none;
+            }
+            
+            @keyframes scroll {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(-100%);
+                }
+            }
+            
+            .tech-carousel {
+                width: 100%;
+                padding: 1rem 0;
+            }
+            
+            .tech-track {
+                width: fit-content;
+                animation: scroll 20s linear infinite;
+            }
+            
+            .tech-track:hover {
+                animation-play-state: paused;
+            }
+            
+            .tech-slide {
+                float: left;
+            }
+        </style>
+        
+        <link rel="icon" href='/favicon.ico?v=12' sizes="any" type="image/x-icon">
+        <link rel="icon" type="image/png" sizes="32x32" href='/favicon-32x32.png?v=12'>
+        <link rel="icon" type="image/png" sizes="16x16" href='/favicon-16x16.png?v=12'>
+        <link rel="apple-touch-icon" sizes="180x180" href='/apple-touch-icon.png?v=12'>
+        <link rel="manifest" href='/site.webmanifest?v=12'>
+
+        
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+        
+        <style>
+        .language-switcher{position:relative;display:inline-block}
+        .language-switcher-btn{display:flex;align-items:center;gap:.25rem;cursor:pointer}
+        .language-dropdown{display:none;position:absolute;background:var(--bg-secondary);min-width:120px;box-shadow:0 8px 16px rgba(0,0,0,.1);z-index:1;border-radius:.5rem;overflow:hidden}
+        .language-switcher:hover .language-dropdown{display:block}
+        .language-dropdown a{padding:.75rem 1rem;display:block;text-decoration:none;transition:background-color .2s}
+        .language-dropdown a:hover{background:rgba(0,0,0,.05)}
+        html.dark .language-dropdown a:hover{background:rgba(255,255,255,.05)}
+        .language-active{font-weight:600}
+        </style>
+    </head>
+    <body class="min-h-screen bg-bg-primary-light dark:bg-bg-primary-dark text-text-primary-light dark:text-text-primary-dark">
+        
+<head>
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Space Grotesk', sans-serif; }
+  </style>
+  <link rel="shortcut icon" href='/favicon.ico?v=4'>
+  <link rel="icon" sizes="any" href='/favicon.ico?v=4'>
+  <link rel="icon" type="image/png" sizes="32x32" href='/favicon-32x32.png?v=4'>
+  <link rel="icon" type="image/png" sizes="16x16" href='/favicon-16x16.png?v=4'>
+  <link rel="apple-touch-icon" sizes="180x180" href='/apple-touch-icon.png?v=4'>
+</head>
+
+<header class="py-6 relative">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      
+      <div class="flex justify-between items-center">
+        
+        
+        
+          <a href="//localhost:1313/" class="text-xl font-bold text-text-primary-light dark:text-text-primary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-300">
+            Taha Lahlou
+          </a>
+        
+        
+        <button id="mobile-menu-button" class="md:hidden text-text-secondary-light dark:text-text-secondary-dark hover:text-text-primary-light dark:hover:text-text-primary-dark focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+      
+      <nav class="hidden md:flex flex-wrap justify-center items-center gap-4 md:gap-6">
+        
+          <a href="//localhost:1313/about/"
+             class="inline-block text-lg text-text-secondary-light dark:text-text-secondary-dark hover:text-text-primary-light dark:hover:text-text-primary-dark transition-colors duration-300 text-accent-light dark:text-accent-dark font-semibold">
+            About
+          </a>
+        
+          <a href="//localhost:1313/contact/"
+             class="inline-block text-lg text-text-secondary-light dark:text-text-secondary-dark hover:text-text-primary-light dark:hover:text-text-primary-dark transition-colors duration-300 ">
+            Contact Me
+          </a>
+        
+      </nav>
+
+      
+      <div class="hidden md:flex justify-end items-center">
+        <div class="flex items-center">
+          <span class="text-lg text-text-secondary-light dark:text-text-secondary-dark mr-2">Local Time:</span>
+          <div id="local-time" class="text-lg text-text-secondary-light dark:text-text-secondary-dark"></div>
+        </div>
+
+        <button id="theme-toggle-button-desktop" class="ml-4 inline-block text-lg text-text-secondary-light dark:text-text-secondary-dark hover:text-text-primary-light dark:hover:text-text-primary-dark transition-colors duration-300 p-2 rounded-md">
+          <svg id="theme-toggle-dark-icon-desktop" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
+            <path d="M21.7519 15.0021C20.597 15.484 19.3296 15.7501 18 15.7501C12.6152 15.7501 8.25 11.3849 8.25 6.00011C8.25 4.67052 8.51614 3.40308 8.99806 2.24817C5.47566 3.71798 3 7.19493 3 11.2501C3 16.6349 7.36522 21.0001 12.75 21.0001C16.8052 21.0001 20.2821 18.5245 21.7519 15.0021Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <svg id="theme-toggle-light-icon-desktop" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-5 h-5 hidden">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  
+  <div id="mobile-menu" class="fixed inset-0 bg-bg-secondary-light dark:bg-bg-secondary-dark z-50 hidden transition-all duration-300 backdrop-blur-2xl">
+    <div class="flex flex-col h-full">
+      <div class="flex justify-between items-center p-6">
+        <span class="text-xl font-bold text-text-primary-light dark:text-text-primary-dark">Menu</span>
+        <div class="flex items-center gap-4">
+          
+          <button id="theme-toggle-button-mobile" class="text-text-secondary-light dark:text-text-secondary-dark hover:text-text-primary-light dark:hover:text-text-primary-dark transition-colors duration-300 flex items-center p-2 rounded-md">
+            <svg id="theme-toggle-dark-icon-mobile" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
+              <path d="M21.7519 15.0021C20.597 15.484 19.3296 15.7501 18 15.7501C12.6152 15.7501 8.25 11.3849 8.25 6.00011C8.25 4.67052 8.51614 3.40308 8.99806 2.24817C5.47566 3.71798 3 7.19493 3 11.2501C3 16.6349 7.36522 21.0001 12.75 21.0001C16.8052 21.0001 20.2821 18.5245 21.7519 15.0021Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg id="theme-toggle-light-icon-mobile" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-5 h-5 hidden">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"/>
+            </svg>
+          </button>
+
+          <button id="mobile-menu-close" class="text-text-secondary-light dark:text-text-secondary-dark hover:text-text-primary-light dark:hover:text-text-primary-dark transition-colors duration-300 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <nav class="flex flex-col p-6 space-y-4">
+        
+          <a href="//localhost:1313/about/" class="text-xl text-text-secondary-light dark:text-text-secondary-dark hover:text-text-primary-light dark:hover:text-text-primary-dark transition-colors duration-300 text-accent-light dark:text-accent-dark font-semibold" data-menu-link>
+            About
+          </a>
+        
+          <a href="//localhost:1313/contact/" class="text-xl text-text-secondary-light dark:text-text-secondary-dark hover:text-text-primary-light dark:hover:text-text-primary-dark transition-colors duration-300 " data-menu-link>
+            Contact Me
+          </a>
+        
+      </nav>
+
+      <div class="mt-auto p-6">
+        <div class="flex items-center justify-center">
+          <span class="text-lg text-text-secondary-light dark:text-text-secondary-dark mr-2">Local Time:</span>
+          <div id="mobile-local-time" class="text-lg text-text-secondary-light dark:text-text-secondary-dark"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  
+  function updateLocalTime() {
+    const timeElements = document.querySelectorAll('#local-time, #mobile-local-time');
+    timeElements.forEach(el => {
+      if (!el) return;
+      const now = new Date();
+      el.textContent = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    });
+  }
+  updateLocalTime();
+  setInterval(updateLocalTime, 1000);
+
+  
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenuClose = document.getElementById('mobile-menu-close');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuLinks = document.querySelectorAll('[data-menu-link]');
+
+  function openMobileMenu(){ mobileMenu.classList.remove('hidden'); document.body.style.overflow='hidden'; }
+  function closeMobileMenu(){ mobileMenu.classList.add('hidden'); document.body.style.overflow=''; }
+
+  if (mobileMenuButton) mobileMenuButton.addEventListener('click', openMobileMenu);
+  if (mobileMenuClose) mobileMenuClose.addEventListener('click', closeMobileMenu);
+  menuLinks.forEach(l => l.addEventListener('click', closeMobileMenu));
+  mobileMenu.addEventListener('click', e => { if (e.target === mobileMenu) closeMobileMenu(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) closeMobileMenu(); });
+
+  
+  const btnD = document.getElementById('theme-toggle-button-desktop');
+  const dDark = document.getElementById('theme-toggle-dark-icon-desktop');
+  const dLight = document.getElementById('theme-toggle-light-icon-desktop');
+  const btnM = document.getElementById('theme-toggle-button-mobile');
+  const mDark = document.getElementById('theme-toggle-dark-icon-mobile');
+  const mLight = document.getElementById('theme-toggle-light-icon-mobile');
+
+  function updateIcons(isDark){
+    if (dDark && dLight){ dLight.classList.toggle('hidden', !isDark); dDark.classList.toggle('hidden', isDark); }
+    if (mDark && mLight){ mLight.classList.toggle('hidden', !isDark); mDark.classList.toggle('hidden', isDark); }
+  }
+  function applyTheme(isDark){
+    document.documentElement.classList.toggle('dark', isDark);
+    localStorage.setItem('color-theme', isDark ? 'dark' : 'light');
+    updateIcons(isDark);
+  }
+  let isDark = localStorage.getItem('color-theme') === 'dark' ||
+               (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  if (isDark && !document.documentElement.classList.contains('dark')) document.documentElement.classList.add('dark');
+  applyTheme(isDark);
+
+  function toggleTheme(){ applyTheme(!document.documentElement.classList.contains('dark')); if (window.innerWidth < 768) closeMobileMenu(); }
+  if (btnD) btnD.addEventListener('click', toggleTheme);
+  if (btnM) btnM.addEventListener('click', toggleTheme);
+</script>
+
+        <main>
+            
+<div class="max-w-4xl mx-auto px-4 py-12">
+  <h1 class="text-5xl font-bold mb-6 text-text-primary-light dark:text-text-primary-dark">About</h1>
+
+  <div class="flex flex-col gap-8">
+    <div class="flex-grow">
+      
+      <div class="bg-bg-primary-light dark:bg-bg-secondary-dark p-8 rounded-lg mb-8 border border-border-primary-light dark:border-border-primary-dark">
+        <div class="prose prose-invert prose-xl max-w-none">
+          <div>
+            <p><strong>Hi, I&rsquo;m Taha</strong></p>
+<p>I like building things that make life easier (or at least less annoying). Lately, that’s meant developing AI workflows to automate repetitive tasks so I can focus on more creative projects. I’m a CS student at Columbia, and most of what I’ve learned has come from online resources and experimenting with technologies I find interesting. I also care a lot about giving back to my community and most of my recognition has come from volunteering, including the President’s Lifetime Achievement Award and the Congressional Award Gold Medal.</p>
+
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="bg-bg-primary-light dark:bg-bg-secondary-dark p-6 md:p-8 rounded-lg mb-8 border border-border-primary-light dark:border-border-primary-dark">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-text-primary-light dark:text-text-primary-dark">Leadership &amp; Professional Development</h2>
+
+        <div class="space-y-6">
+
+          
+          <div class="flex flex-col gap-2 p-4 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark transition-all duration-300">
+            <div class="text-text-secondary-light dark:text-text-secondary-dark hover:text-text-primary-light dark:hover:text-text-primary-dark text-base">
+              <a href="https://www.cs.columbia.edu/esp" target="_blank" class="animated-link inline-flex items-center gap-2">
+                Columbia Emerging Scholars Program (ESP)
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1 opacity-70 group-hover:opacity-100 transition-opacity duration-200">
+                  <path d="M7 17l9.2-9.2M17 17V7H7"/>
+                </svg>
+              </a>
+            </div>
+            <div class="flex items-center gap-2">
+              <h3 class="text-xl md:text-2xl font-semibold text-text-primary-light dark:text-text-primary-dark">Workshop Assistant — New York, NY</h3>
+            </div>
+            <div class="text-text-secondary-light dark:text-text-secondary-dark flex items-center gap-2 text-base prose">
+              <span>Sep. 2025 – Present</span>
+            </div>
+            <div class="text-text-secondary-light dark:text-text-secondary-dark text-base prose">
+              <ul class="list-disc pl-5">
+                <li>Facilitate 75-minute weekly peer-led workshops for a cohort of 14 Intro CS students.</li>
+                <li>Promote collaborative learning in CS; support topics spanning AI and more.</li>
+                <li>Mentor students on algorithmic thinking, debugging strategies, and clear communication of solutions.</li>
+              </ul>
+            </div>
+          </div>
+
+          
+          <div class="flex flex-col gap-2 p-4 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark transition-all duration-300">
+            <div class="text-text-secondary-light dark:text-text-secondary-dark hover:text-text-primary-light dark:hover:text-text-primary-dark text-base">
+              <a href="https://www.cs.columbia.edu/esp" target="_blank" class="animated-link inline-flex items-center gap-2">
+                Columbia Emerging Scholars Program (ESP)
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1 opacity-70 group-hover:opacity-100 transition-opacity duration-200">
+                  <path d="M7 17l9.2-9.2M17 17V7H7"/>
+                </svg>
+              </a>
+            </div>
+            <div class="flex items-center gap-2">
+              <h3 class="text-xl md:text-2xl font-semibold text-text-primary-light dark:text-text-primary-dark">Scholar — New York, NY</h3>
+            </div>
+            <div class="text-text-secondary-light dark:text-text-secondary-dark flex items-center gap-2 text-base prose">
+              <span>Feb. 2025 – May 2025</span>
+            </div>
+            <div class="text-text-secondary-light dark:text-text-secondary-dark text-base prose">
+              <ul class="list-disc pl-5">
+                <li>Selected for a 75-minute weekly peer-led program emphasizing algorithmic thinking and collaborative problem solving in CS.</li>
+                <li>Solved open-ended logic puzzles and advanced CS problems developed by PhD students with faculty input.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      
+      
+      <div class="bg-bg-primary-light dark:bg-bg-secondary-dark p-6 md:p-8 rounded-lg mb-8 border border-border-primary-light dark:border-border-primary-dark">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-text-primary-light dark:text-text-primary-dark">Honors &amp; Awards</h2>
+
+        <div class="space-y-4">
+          
+          <div class="p-5 md:p-6 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark hover:shadow-md transition-all duration-300">
+            
+              <div class="text-text-secondary-light dark:text-text-secondary-dark text-sm mb-1">The President of the United States</div>
+            
+            <div class="flex items-start justify-between gap-4">
+              <h3 class="text-xl md:text-2xl font-semibold text-text-primary-light dark:text-text-primary-dark">President&#39;s Lifetime Achievement Award</h3>
+            </div>
+            
+              <p class="mt-2 text-text-secondary-light dark:text-text-secondary-dark text-base">May. 2024</p>
+            
+          </div>
+          
+          <div class="p-5 md:p-6 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark hover:shadow-md transition-all duration-300">
+            
+              <div class="text-text-secondary-light dark:text-text-secondary-dark text-sm mb-1">Amazon Future Engineer Scholarship and Internship</div>
+            
+            <div class="flex items-start justify-between gap-4">
+              <h3 class="text-xl md:text-2xl font-semibold text-text-primary-light dark:text-text-primary-dark">Amazon Future Engineer Scholar</h3>
+            </div>
+            
+              <p class="mt-2 text-text-secondary-light dark:text-text-secondary-dark text-base">Mar. 2024</p>
+            
+          </div>
+          
+          <div class="p-5 md:p-6 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark hover:shadow-md transition-all duration-300">
+            
+              <div class="text-text-secondary-light dark:text-text-secondary-dark text-sm mb-1">Ronald Reagan Presidential Foundation</div>
+            
+            <div class="flex items-start justify-between gap-4">
+              <h3 class="text-xl md:text-2xl font-semibold text-text-primary-light dark:text-text-primary-dark">GE-Reagan Foundation Scholarship Program Semifinalist</h3>
+            </div>
+            
+              <p class="mt-2 text-text-secondary-light dark:text-text-secondary-dark text-base">Jan. 2024</p>
+            
+          </div>
+          
+          <div class="p-5 md:p-6 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark hover:shadow-md transition-all duration-300">
+            
+              <div class="text-text-secondary-light dark:text-text-secondary-dark text-sm mb-1">The 2023 Congressional App Challenge for Nevada CD-3</div>
+            
+            <div class="flex items-start justify-between gap-4">
+              <h3 class="text-xl md:text-2xl font-semibold text-text-primary-light dark:text-text-primary-dark">Certificate of Special Congressional Recognition</h3>
+            </div>
+            
+              <p class="mt-2 text-text-secondary-light dark:text-text-secondary-dark text-base">Dec. 2023</p>
+            
+          </div>
+          
+          <div class="p-5 md:p-6 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark hover:shadow-md transition-all duration-300">
+            
+              <div class="text-text-secondary-light dark:text-text-secondary-dark text-sm mb-1">Bill &amp; Melinda Gates Foundation</div>
+            
+            <div class="flex items-start justify-between gap-4">
+              <h3 class="text-xl md:text-2xl font-semibold text-text-primary-light dark:text-text-primary-dark">The Gates Scholarship Semifinalist</h3>
+            </div>
+            
+              <p class="mt-2 text-text-secondary-light dark:text-text-secondary-dark text-base">Dec. 2023</p>
+            
+          </div>
+          
+          <div class="p-5 md:p-6 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark hover:shadow-md transition-all duration-300">
+            
+              <div class="text-text-secondary-light dark:text-text-secondary-dark text-sm mb-1">The United States Senate</div>
+            
+            <div class="flex items-start justify-between gap-4">
+              <h3 class="text-xl md:text-2xl font-semibold text-text-primary-light dark:text-text-primary-dark">United States Senate Youth Program Semifinalist</h3>
+            </div>
+            
+              <p class="mt-2 text-text-secondary-light dark:text-text-secondary-dark text-base">Nov. 2023</p>
+            
+          </div>
+          
+          <div class="p-5 md:p-6 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark hover:shadow-md transition-all duration-300">
+            
+              <div class="text-text-secondary-light dark:text-text-secondary-dark text-sm mb-1">QuestBridge</div>
+            
+            <div class="flex items-start justify-between gap-4">
+              <h3 class="text-xl md:text-2xl font-semibold text-text-primary-light dark:text-text-primary-dark">QuestBridge National College Match Finalist</h3>
+            </div>
+            
+              <p class="mt-2 text-text-secondary-light dark:text-text-secondary-dark text-base">Oct. 2023</p>
+            
+          </div>
+          
+          <div class="p-5 md:p-6 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark hover:shadow-md transition-all duration-300">
+            
+              <div class="text-text-secondary-light dark:text-text-secondary-dark text-sm mb-1">United States Congress</div>
+            
+            <div class="flex items-start justify-between gap-4">
+              <h3 class="text-xl md:text-2xl font-semibold text-text-primary-light dark:text-text-primary-dark">Congressional Award Gold Medalist &amp; STEM Star</h3>
+            </div>
+            
+              <p class="mt-2 text-text-secondary-light dark:text-text-secondary-dark text-base">Sept. 2023</p>
+            
+          </div>
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<style>
+  .prose { color: #4b5563; font-size: 1.125rem; }
+  html.dark .prose { color: #9ca3af; }
+  .prose p { color: #4b5563; margin-bottom: 1.5rem; line-height: 1.9; }
+  html.dark .prose p { color: #9ca3af; }
+  .prose p + p { margin-top: 2rem; }
+
+  .animated-link { position: relative; display: inline-flex; align-items: center; }
+  .animated-link::after {
+    content: ''; position: absolute; width: 0; height: 1px; bottom: -1px; left: 0;
+    background-color: #0284c7; transition: width .3s ease-in-out;
+  }
+  .animated-link:hover::after { width: 100%; }
+  html.dark .animated-link::after { background-color: #0ea5e9; }
+</style>
+
+        </main>
+        
+<footer class="mt-32 text-center">
+    <div class="max-w-3xl mx-auto">
+        <div class="border-t border-border-primary-light dark:border-border-primary-dark pt-5">
+            <div class="flex flex-col items-center justify-center gap-2">
+                                
+                
+                
+                <p class="text-text-secondary-light dark:text-text-secondary-dark text-xm ">© 2025 Taha Lahlou</p>
+                <p class="text-text-secondary-light dark:text-text-secondary-dark text-xm pb-12">Built using <a href="https://gohugo.io/" target="_blank" class="animated-link text-accent-light dark:text-accent-dark hover:text-text-primary-light dark:hover:text-text-primary-dark">Hugo</a>. Take a look at my <a href="https://github.com/tahalahlou" target="_blank" class="animated-link text-accent-light dark:text-accent-dark hover:text-text-primary-light dark:hover:text-text-primary-dark">GitHub</a></p>
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    .animated-link {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+    }
+    
+    .animated-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 1px;
+        bottom: -1px;
+        left: 0;
+        background-color: #0284c7;  
+        transition: width 0.3s ease-in-out;
+    }
+    
+    .animated-link:hover::after {
+        width: 100%;
+    }
+    html.dark .animated-link::after {
+        background-color: #0ea5e9;  
+    }
+</style> 
+    </body>
+</html> 

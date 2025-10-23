@@ -1,0 +1,13 @@
+baseURL: "/"
+languageCode: en-us
+title: "Personal Portfolio"
+theme: hugo-noir
+
+menu:
+  main:
+    - name: "About"
+      pageRef: "/about"
+      weight: 1
+    - name: "Contact Me"
+      pageRef: "/contact"
+      weight: 5
