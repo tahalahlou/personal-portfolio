@@ -1,0 +1,124 @@
+{{ define "main" }}
+<div class="max-w-4xl mx-auto px-4 py-12">
+  <h1 class="text-5xl font-bold mb-6 text-text-primary-light dark:text-text-primary-dark">{{ .Title }}</h1>
+
+  <div class="flex flex-col gap-8">
+    <div class="flex-grow">
+      <!-- About card -->
+      <div class="bg-bg-primary-light dark:bg-bg-secondary-dark p-8 rounded-lg mb-8 border border-border-primary-light dark:border-border-primary-dark">
+        <div class="prose prose-invert prose-xl max-w-none">
+          <div>
+            {{ .Content }}
+          </div>
+        </div>
+      </div>
+
+      {{/* ---------- LEADERSHIP & PROFESSIONAL DEVELOPMENT ---------- */}}
+      <div class="bg-bg-primary-light dark:bg-bg-secondary-dark p-6 md:p-8 rounded-lg mb-8 border border-border-primary-light dark:border-border-primary-dark">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-text-primary-light dark:text-text-primary-dark">Leadership &amp; Professional Development</h2>
+
+        <div class="space-y-6">
+
+          {{/* ESP — Workshop Assistant (Sep 2025 – Present) */}}
+          <div class="flex flex-col gap-2 p-4 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark transition-all duration-300">
+            <div class="text-text-secondary-light dark:text-text-secondary-dark hover:text-text-primary-light dark:hover:text-text-primary-dark text-base">
+              <a href="https://www.cs.columbia.edu/esp" target="_blank" class="animated-link inline-flex items-center gap-2">
+                Columbia Emerging Scholars Program (ESP)
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1 opacity-70 group-hover:opacity-100 transition-opacity duration-200">
+                  <path d="M7 17l9.2-9.2M17 17V7H7"/>
+                </svg>
+              </a>
+            </div>
+            <div class="flex items-center gap-2">
+              <h3 class="text-xl md:text-2xl font-semibold text-text-primary-light dark:text-text-primary-dark">Workshop Assistant — New York, NY</h3>
+            </div>
+            <div class="text-text-secondary-light dark:text-text-secondary-dark flex items-center gap-2 text-base prose">
+              <span>Sep. 2025 – Present</span>
+            </div>
+            <div class="text-text-secondary-light dark:text-text-secondary-dark text-base prose">
+              <ul class="list-disc pl-5">
+                <li>Facilitate 75-minute weekly peer-led workshops for a cohort of 14 Intro CS students.</li>
+                <li>Promote collaborative learning in CS; support topics spanning AI and more.</li>
+                <li>Mentor students on algorithmic thinking, debugging strategies, and clear communication of solutions.</li>
+              </ul>
+            </div>
+          </div>
+
+          {{/* ESP — Scholar (Feb 2025 – May 2025) */}}
+          <div class="flex flex-col gap-2 p-4 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark transition-all duration-300">
+            <div class="text-text-secondary-light dark:text-text-secondary-dark hover:text-text-primary-light dark:hover:text-text-primary-dark text-base">
+              <a href="https://www.cs.columbia.edu/esp" target="_blank" class="animated-link inline-flex items-center gap-2">
+                Columbia Emerging Scholars Program (ESP)
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1 opacity-70 group-hover:opacity-100 transition-opacity duration-200">
+                  <path d="M7 17l9.2-9.2M17 17V7H7"/>
+                </svg>
+              </a>
+            </div>
+            <div class="flex items-center gap-2">
+              <h3 class="text-xl md:text-2xl font-semibold text-text-primary-light dark:text-text-primary-dark">Scholar — New York, NY</h3>
+            </div>
+            <div class="text-text-secondary-light dark:text-text-secondary-dark flex items-center gap-2 text-base prose">
+              <span>Feb. 2025 – May 2025</span>
+            </div>
+            <div class="text-text-secondary-light dark:text-text-secondary-dark text-base prose">
+              <ul class="list-disc pl-5">
+                <li>Selected for a 75-minute weekly peer-led program emphasizing algorithmic thinking and collaborative problem solving in CS.</li>
+                <li>Solved open-ended logic puzzles and advanced CS problems developed by PhD students with faculty input.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {{/* ---------- HONORS & AWARDS (after Leadership; newest → oldest) ---------- */}}
+      {{ $awards := slice
+          (dict "title" "President's Lifetime Achievement Award" "org" "The President of the United States" "note" "May. 2024")
+          (dict "title" "Amazon Future Engineer Scholar" "org" "Amazon Future Engineer Scholarship and Internship" "note" "Mar. 2024")
+          (dict "title" "GE-Reagan Foundation Scholarship Program Semifinalist" "org" "Ronald Reagan Presidential Foundation" "note" "Jan. 2024")
+          (dict "title" "Certificate of Special Congressional Recognition" "org" "The 2023 Congressional App Challenge for Nevada CD-3" "note" "Dec. 2023")
+          (dict "title" "The Gates Scholarship Semifinalist" "org" "Bill & Melinda Gates Foundation" "note" "Dec. 2023")
+          (dict "title" "United States Senate Youth Program Semifinalist" "org" "The United States Senate" "note" "Nov. 2023")
+          (dict "title" "QuestBridge National College Match Finalist" "org" "QuestBridge" "note" "Oct. 2023")
+          (dict "title" "Congressional Award Gold Medalist & STEM Star" "org" "United States Congress" "note" "Sept. 2023")
+      }}
+      <div class="bg-bg-primary-light dark:bg-bg-secondary-dark p-6 md:p-8 rounded-lg mb-8 border border-border-primary-light dark:border-border-primary-dark">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-text-primary-light dark:text-text-primary-dark">Honors &amp; Awards</h2>
+
+        <div class="space-y-4">
+          {{ range $awards }}
+          <div class="p-5 md:p-6 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark hover:shadow-md transition-all duration-300">
+            {{ if .org }}
+              <div class="text-text-secondary-light dark:text-text-secondary-dark text-sm mb-1">{{ .org }}</div>
+            {{ end }}
+            <div class="flex items-start justify-between gap-4">
+              <h3 class="text-xl md:text-2xl font-semibold text-text-primary-light dark:text-text-primary-dark">{{ .title }}</h3>
+            </div>
+            {{ if .note }}
+              <p class="mt-2 text-text-secondary-light dark:text-text-secondary-dark text-base">{{ .note }}</p>
+            {{ end }}
+          </div>
+          {{ end }}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<style>
+  .prose { color: #4b5563; font-size: 1.125rem; }
+  html.dark .prose { color: #9ca3af; }
+  .prose p { color: #4b5563; margin-bottom: 1.5rem; line-height: 1.9; }
+  html.dark .prose p { color: #9ca3af; }
+  .prose p + p { margin-top: 2rem; }
+
+  .animated-link { position: relative; display: inline-flex; align-items: center; }
+  .animated-link::after {
+    content: ''; position: absolute; width: 0; height: 1px; bottom: -1px; left: 0;
+    background-color: #0284c7; transition: width .3s ease-in-out;
+  }
+  .animated-link:hover::after { width: 100%; }
+  html.dark .animated-link::after { background-color: #0ea5e9; }
+</style>
+{{ end }}
