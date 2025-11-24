@@ -1,18 +1,15 @@
 projects:
-  - title: "AI Job Application Assistant"
-    description: "An automated job-application system that uses generative AI to match listings from major job boards with tailored resumes."
-    image: "/images/ai4.png"
-    tech: "LLMs, Python, FastAPI, n8n, LaTeX"
+  - title: "GradCU"
+    description: "An interactive degree-requirements and course-prerequisite visualizer for Columbia University, built to support 9,000+ students and faculty with multi-year course planning."
+    image: "/images/ai8.png"
+    tech: "Next.js, React, TypeScript, Tailwind CSS, D3.js"
     links:
-      - label: "Learn More"
-        url: "https://github.com/tahalahlou"
+      - label: "Visit Site"
+        url: "https://www.gradcu.me/"
     featured: true
 
   - title: "Social Stockfish"
     description: "A generative AI co-pilot that uses Monte Carlo simulations to model conversation paths and suggest the best reply."
     image: "/images/ai6.png"
     tech: "Flask, React, Python, Groq, Together AI"
-    links:
-      - label: "Learn More"
-        url: "https://github.com/tahalahlou"
     featured: true
