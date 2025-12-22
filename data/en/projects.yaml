@@ -1,6 +1,6 @@
 projects:
   - title: "GradCU"
-    description: "An interactive degree-requirements and course-prerequisite visualizer for Columbia University, built to support 9,000+ students and faculty with multi-year course planning."
+    description: "Built an interactive degree planning and prerequisite visualizer for 9,000+ Columbia students and faculty, featuring dynamic graph rendering spanning 64 courses with AND/OR logic."
     image: "/images/ai8.png"
     tech: "Next.js, React, TypeScript, Tailwind CSS, D3.js"
     links:
@@ -8,8 +8,8 @@ projects:
         url: "https://www.gradcu.me/"
     featured: true
 
-  - title: "Social Stockfish"
-    description: "A generative AI co-pilot that uses Monte Carlo simulations to model conversation paths and suggest the best reply."
-    image: "/images/ai6.png"
-    tech: "Flask, React, Python, Groq, Together AI"
+  - title: "OnTrack NYC"
+    description: "Built a real-time NYC transit interface for tracking subway arrivals across 23 subway lines and 3 shuttles using live MTA data."
+    image: "/images/ontrack.png"
+    tech: "TypeScript, React, Docker, Nginx, REST APIs"
     featured: true

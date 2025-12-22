@@ -3,4 +3,4 @@ experience:
     role: "Software Development Engineer Intern"
     period: "May 2025 - Aug. 2025"
     country: "Seattle, WA"
-    description: "Built a Java-based automation system on AWS Lambda that uses agentic AI workflows to analyze, resolve, and reroute support tickets stemming from downstream service degradations, launched to production."
+    description: "Built an agentic, Java-based AWS Lambda automation that uses LLM-driven workflows to reduce on-call engineer workload and speed up resolution of payment-related support tickets."
