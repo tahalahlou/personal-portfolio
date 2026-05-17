@@ -1,15 +1,18 @@
 projects:
+  - title: "OnTrack NYC"
+    description: "Real-time NYC Subway tracking app covering all 26 routes and 900+ stops with 5-second live polling."
+    image: "/images/ontrack.png"
+    tech: "TypeScript, React, Docker, Nginx, REST APIs"
+    links:
+      - label: "Visit GitHub"
+        url: "https://github.com/tahalahlou/ontrack-nyc"
+    featured: true
+
   - title: "GradCU"
-    description: "Built an interactive degree planning and prerequisite visualizer for 9,000+ Columbia students and faculty, featuring dynamic graph rendering spanning 64 courses with AND/OR logic."
+    description: "Interactive degree planning tool for 9,000+ Columbia students — prerequisite graph over 83 nodes and 95 directed edges with recursive DFS traversal."
     image: "/images/ai8.png"
     tech: "Next.js, React, TypeScript, Tailwind CSS, D3.js"
     links:
       - label: "Visit Site"
         url: "https://www.gradcu.me/"
-    featured: true
-
-  - title: "OnTrack NYC"
-    description: "Built a real-time NYC transit interface for tracking subway arrivals across 23 subway lines and 3 shuttles using live MTA data."
-    image: "/images/ontrack.png"
-    tech: "TypeScript, React, Docker, Nginx, REST APIs"
     featured: true

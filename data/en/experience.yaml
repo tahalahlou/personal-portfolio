@@ -1,6 +1,18 @@
 experience:
   - company: "Amazon"
     role: "Software Development Engineer Intern"
+    period: "May 2026 - Present"
+    country: "Seattle, WA"
+    description: "Returning SDE Intern in the Global Payments Technology organization."
+
+  - company: "The Comp Set"
+    role: "Software Engineer Intern "
+    period: "Jan. 2026 - May 2026"
+    country: "New York, NY"
+    description: "Built an 8-source ETL pipeline aggregating 30k+ restaurant records and a Claude-powered AI agent to detect competitor price shifts across 565+ menu items."
+
+  - company: "Amazon"
+    role: "Software Development Engineer Intern"
     period: "May 2025 - Aug. 2025"
     country: "Seattle, WA"
-    description: "Built an agentic, Java-based AWS Lambda automation that uses LLM-driven workflows to reduce on-call engineer workload and speed up resolution of payment-related support tickets."
+    description: "Built an AI agent on AWS Lambda that eliminated 16 wks/yr of on-call engineering effort and cut ticket resolution time by 2 days across 10,000+ logs."
